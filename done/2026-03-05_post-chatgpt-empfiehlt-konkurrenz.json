@@ -7,5 +7,19 @@
   "caption_fb": "ChatGPT empfiehlt deine Konkurrenz. Nicht dich.\n\nDas ist kein Worst-Case-Szenario. Das passiert gerade. Jeden Tag.\n\nIch habe 10 Coaches und Berater gegoogelt — alle mit guten Websites, starken Google-Rankings, echten Ergebnissen. Dann habe ich ChatGPT gefragt: \"Wer ist ein guter Business Coach im DACH-Raum?\"\n\nErgebnis: 2 von 10 wurden genannt. Die anderen 8? Komplett unsichtbar.\n\nDas Problem: Die meisten merken es nicht einmal. Kein Analytics-Dashboard zeigt dir, dass du gerade einen Kunden an die KI-Empfehlung deiner Konkurrenz verloren hast.\n\nDie neue Realität ist einfach: Wer nicht in KI-Antworten auftaucht, verliert Kunden. Leise. Dauerhaft.\n\nDie gute Nachricht: Das lässt sich ändern. Und es ist einfacher als du denkst.\n\nHast du schon mal getestet ob ChatGPT dich kennt? Probier es aus und schreib mir dein Ergebnis in die Kommentare.",
   "benefit": "ChatGPT empfiehlt deine Konkurrenz — nicht dich",
   "skip_fb": false,
-  "staged_at": "2026-03-05T08:00:10"
+  "staged_at": "2026-03-05T08:00:10",
+  "result": {
+    "content_id": "post-chatgpt-empfiehlt-konkurrenz",
+    "planned_date": "2026-03-05",
+    "carousel_id": "18114263587727164",
+    "fb_id": null,
+    "published_at": "2026-03-05T07:05:18.439276+00:00",
+    "slide_urls": [
+      "https://raw.githubusercontent.com/steelratsvibes/ki-evolution-publisher/main/queue/2026-03-05_post-chatgpt-empfiehlt-konkurrenz/slide-01.png",
+      "https://raw.githubusercontent.com/steelratsvibes/ki-evolution-publisher/main/queue/2026-03-05_post-chatgpt-empfiehlt-konkurrenz/slide-02.png",
+      "https://raw.githubusercontent.com/steelratsvibes/ki-evolution-publisher/main/queue/2026-03-05_post-chatgpt-empfiehlt-konkurrenz/slide-03.png",
+      "https://raw.githubusercontent.com/steelratsvibes/ki-evolution-publisher/main/queue/2026-03-05_post-chatgpt-empfiehlt-konkurrenz/slide-04.png",
+      "https://raw.githubusercontent.com/steelratsvibes/ki-evolution-publisher/main/queue/2026-03-05_post-chatgpt-empfiehlt-konkurrenz/slide-05.png"
+    ]
+  }
 }
