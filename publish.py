@@ -6,7 +6,6 @@ publishes to IG + FB, moves metadata to done/.
 Requires only `requests`. All tokens via environment variables.
 """
 
-import base64
 import json
 import os
 import shutil
@@ -14,33 +13,30 @@ import sys
 import time
 from datetime import date, datetime, timezone
 from pathlib import Path
+from urllib.parse import quote
 
 import requests
 
 # ── Config from environment ──
 IG_USER_ID = os.environ.get("IG_USER_ID")
 IG_TOKEN = os.environ.get("IG_ACCESS_TOKEN")
-IMGBB_KEY = os.environ.get("IMGBB_API_KEY")
 FB_PAGE_ID = os.environ.get("FB_PAGE_ID", "1033633629830009")
 FB_TOKEN = os.environ.get("FB_ACCESS_TOKEN") or IG_TOKEN
 API_VERSION = "v25.0"
 TIMEOUT = 60
 
+# GitHub raw URL base (public repo)
+GH_REPO = os.environ.get("GH_REPO", "steelratsvibes/ki-evolution-publisher")
+GH_BRANCH = os.environ.get("GH_BRANCH", "main")
+
 QUEUE_DIR = Path(__file__).parent / "queue"
 DONE_DIR = Path(__file__).parent / "done"
 
 
-def upload_imgbb(file_path: Path) -> str:
-    """Upload PNG to imgbb, return display_url."""
-    b64 = base64.b64encode(file_path.read_bytes()).decode()
-    resp = requests.post(
-        f"https://api.imgbb.com/1/upload?key={IMGBB_KEY}",
-        data={"image": b64},
-        timeout=30,
-    )
-    if resp.status_code != 200:
-        raise RuntimeError(f"imgbb {resp.status_code}: {resp.text[:200]}")
-    return resp.json()["data"]["display_url"]
+def github_raw_url(relative_path: str) -> str:
+    """Build raw.githubusercontent.com URL for a file in this repo."""
+    encoded = quote(relative_path)
+    return f"https://raw.githubusercontent.com/{GH_REPO}/{GH_BRANCH}/{encoded}"
 
 
 def ig_post(path: str, payload: dict, retries: int = 3) -> dict:
@@ -166,9 +162,6 @@ def main():
     if not IG_TOKEN or not IG_USER_ID:
         print("ERROR: IG_ACCESS_TOKEN and IG_USER_ID must be set")
         sys.exit(1)
-    if not IMGBB_KEY:
-        print("ERROR: IMGBB_API_KEY must be set")
-        sys.exit(1)
 
     if not check_token():
         sys.exit(1)
@@ -186,15 +179,22 @@ def main():
     print(f"Datum: {data['planned_date']}")
     print(f"Slides: {len(slides)}")
 
-    # Upload slides to imgbb (fresh URLs)
-    print("\nSlides zu imgbb hochladen...")
+    # Build raw GitHub URLs for slides
+    print("\nSlide-URLs generieren...")
     slide_urls = []
-    for i, s in enumerate(slides):
-        print(f"  {i+1}/{len(slides)} {s.name}...", end=" ", flush=True)
-        url = upload_imgbb(s)
+    for s in slides:
+        rel = f"queue/{post_dir.name}/{s.name}"
+        url = github_raw_url(rel)
         slide_urls.append(url)
-        print("OK")
-        time.sleep(1)
+        print(f"  {s.name} -> {url[:70]}...")
+
+    # Verify first URL is accessible
+    print("\nURL-Check...", end=" ", flush=True)
+    r = requests.head(slide_urls[0], timeout=15, allow_redirects=True)
+    if r.status_code != 200:
+        print(f"FEHLER: Status {r.status_code} fuer {slide_urls[0]}")
+        sys.exit(1)
+    print(f"OK (Content-Type: {r.headers.get('content-type', '?')})")
 
     result = {"content_id": data["content_id"], "planned_date": data["planned_date"]}
 
