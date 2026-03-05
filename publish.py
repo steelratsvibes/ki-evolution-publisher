@@ -1,12 +1,15 @@
 #!/usr/bin/env python3
 """Standalone Instagram/Facebook publisher for GitHub Actions.
 
-Reads a staged JSON from queue/, publishes to IG + FB, moves to done/.
+Reads a staged post directory from queue/, uploads PNGs to imgbb at runtime,
+publishes to IG + FB, moves metadata to done/.
 Requires only `requests`. All tokens via environment variables.
 """
 
+import base64
 import json
 import os
+import shutil
 import sys
 import time
 from datetime import date, datetime, timezone
@@ -17,6 +20,7 @@ import requests
 # ── Config from environment ──
 IG_USER_ID = os.environ.get("IG_USER_ID")
 IG_TOKEN = os.environ.get("IG_ACCESS_TOKEN")
+IMGBB_KEY = os.environ.get("IMGBB_API_KEY")
 FB_PAGE_ID = os.environ.get("FB_PAGE_ID", "1033633629830009")
 FB_TOKEN = os.environ.get("FB_ACCESS_TOKEN") or IG_TOKEN
 API_VERSION = "v25.0"
@@ -26,15 +30,28 @@ QUEUE_DIR = Path(__file__).parent / "queue"
 DONE_DIR = Path(__file__).parent / "done"
 
 
+def upload_imgbb(file_path: Path) -> str:
+    """Upload PNG to imgbb, return display_url."""
+    b64 = base64.b64encode(file_path.read_bytes()).decode()
+    resp = requests.post(
+        f"https://api.imgbb.com/1/upload?key={IMGBB_KEY}",
+        data={"image": b64},
+        timeout=30,
+    )
+    if resp.status_code != 200:
+        raise RuntimeError(f"imgbb {resp.status_code}: {resp.text[:200]}")
+    return resp.json()["data"]["display_url"]
+
+
 def ig_post(path: str, payload: dict, retries: int = 3) -> dict:
     url = f"https://graph.facebook.com/{API_VERSION}/{path}"
     for attempt in range(retries):
         resp = requests.post(url, data=payload, timeout=TIMEOUT)
         if resp.status_code == 200:
             return resp.json()
-        if resp.status_code == 500 and attempt < retries - 1:
+        if resp.status_code >= 500 and attempt < retries - 1:
             wait = (attempt + 1) * 10
-            print(f"  API 500 — retry in {wait}s...")
+            print(f"  API {resp.status_code} — retry in {wait}s...")
             time.sleep(wait)
             continue
         raise RuntimeError(f"API {resp.status_code}: {resp.text[:300]}")
@@ -53,15 +70,12 @@ def check_token() -> bool:
     return True
 
 
-def publish_carousel(data: dict) -> str | None:
-    urls = data["slide_urls"]
-    caption = data["caption"]
-    n = len(urls)
+def publish_carousel(slide_urls: list[str], caption: str) -> str:
+    n = len(slide_urls)
     print(f"\nCarousel: {n} Slides")
 
-    # Item containers
     cids = []
-    for i, url in enumerate(urls):
+    for i, url in enumerate(slide_urls):
         print(f"  Container {i+1}/{n}...", end=" ", flush=True)
         r = ig_post(f"{IG_USER_ID}/media", {
             "image_url": url, "is_carousel_item": "true",
@@ -72,7 +86,6 @@ def publish_carousel(data: dict) -> str | None:
         if i < n - 1:
             time.sleep(3)
 
-    # Carousel container
     print("  Carousel erstellen...")
     r = ig_post(f"{IG_USER_ID}/media", {
         "media_type": "CAROUSEL", "children": ",".join(cids),
@@ -80,7 +93,6 @@ def publish_carousel(data: dict) -> str | None:
     })
     creation_id = r["id"]
 
-    # Publish
     print("  15s warten + publishen...")
     time.sleep(15)
     r = ig_post(f"{IG_USER_ID}/media_publish", {
@@ -91,37 +103,9 @@ def publish_carousel(data: dict) -> str | None:
     return mid
 
 
-def publish_stories(data: dict) -> list[str]:
-    story_urls = data.get("story_urls", [])
-    if not story_urls:
-        return []
+def publish_facebook(slide_urls: list[str], caption: str) -> str | None:
+    n = len(slide_urls)
 
-    n = len(story_urls)
-    print(f"\nStories: {n}")
-    mids = []
-    for i, url in enumerate(story_urls):
-        print(f"  Story {i+1}/{n}...", end=" ", flush=True)
-        r = ig_post(f"{IG_USER_ID}/media", {
-            "image_url": url, "media_type": "STORIES",
-            "access_token": IG_TOKEN,
-        })
-        time.sleep(5)
-        r = ig_post(f"{IG_USER_ID}/media_publish", {
-            "creation_id": r["id"], "access_token": IG_TOKEN,
-        })
-        mids.append(r["id"])
-        print(f"OK ({r['id']})")
-        if i < n - 1:
-            time.sleep(5)
-    return mids
-
-
-def publish_facebook(data: dict) -> str | None:
-    urls = data["slide_urls"]
-    caption = data.get("caption_fb") or data["caption"].split("\n\n#")[0]
-    n = len(urls)
-
-    # Get page token
     r = requests.get(
         f"https://graph.facebook.com/{API_VERSION}/me/accounts",
         params={"access_token": FB_TOKEN},
@@ -140,10 +124,8 @@ def publish_facebook(data: dict) -> str | None:
         return None
 
     print(f"\nFacebook: {n} Fotos")
-
-    # Upload as unpublished
     photo_ids = []
-    for i, url in enumerate(urls):
+    for i, url in enumerate(slide_urls):
         print(f"  Foto {i+1}/{n}...", end=" ", flush=True)
         r = ig_post(f"{FB_PAGE_ID}/photos", {
             "url": url, "published": "false", "access_token": page_token,
@@ -153,7 +135,6 @@ def publish_facebook(data: dict) -> str | None:
         if i < n - 1:
             time.sleep(2)
 
-    # Create feed post
     payload = {"message": caption, "access_token": page_token}
     for i, pid in enumerate(photo_ids):
         payload[f"attached_media[{i}]"] = json.dumps({"media_fbid": pid})
@@ -165,14 +146,15 @@ def publish_facebook(data: dict) -> str | None:
 
 
 def find_todays_job() -> Path | None:
+    """Find the meta.json for today's (or oldest overdue) post."""
     today = date.today().isoformat()
-    candidates = sorted(QUEUE_DIR.glob("*.json"))
-    # First try exact date match
+    candidates = sorted(QUEUE_DIR.glob("*/meta.json"))
+    # Exact date match first
     for f in candidates:
         data = json.loads(f.read_text())
         if data.get("planned_date") == today:
             return f
-    # Then take the oldest overdue job
+    # Oldest overdue
     for f in candidates:
         data = json.loads(f.read_text())
         if data.get("planned_date") <= today:
@@ -184,6 +166,9 @@ def main():
     if not IG_TOKEN or not IG_USER_ID:
         print("ERROR: IG_ACCESS_TOKEN and IG_USER_ID must be set")
         sys.exit(1)
+    if not IMGBB_KEY:
+        print("ERROR: IMGBB_API_KEY must be set")
+        sys.exit(1)
 
     if not check_token():
         sys.exit(1)
@@ -193,48 +178,57 @@ def main():
         print("Kein Post fuer heute in der Queue.")
         sys.exit(0)
 
+    post_dir = job_file.parent
     data = json.loads(job_file.read_text())
+    slides = sorted(post_dir.glob("slide-*.png"))
+
     print(f"\nPost: {data['title']}")
     print(f"Datum: {data['planned_date']}")
-    print(f"Slides: {len(data['slide_urls'])}")
+    print(f"Slides: {len(slides)}")
+
+    # Upload slides to imgbb (fresh URLs)
+    print("\nSlides zu imgbb hochladen...")
+    slide_urls = []
+    for i, s in enumerate(slides):
+        print(f"  {i+1}/{len(slides)} {s.name}...", end=" ", flush=True)
+        url = upload_imgbb(s)
+        slide_urls.append(url)
+        print("OK")
+        time.sleep(1)
 
     result = {"content_id": data["content_id"], "planned_date": data["planned_date"]}
 
     # Carousel
     try:
-        carousel_id = publish_carousel(data)
+        carousel_id = publish_carousel(slide_urls, data["caption"])
         result["carousel_id"] = carousel_id
     except Exception as e:
         print(f"CAROUSEL FEHLER: {e}")
         result["carousel_error"] = str(e)
         sys.exit(1)
 
-    # Stories
-    try:
-        story_ids = publish_stories(data)
-        result["story_ids"] = story_ids
-    except Exception as e:
-        print(f"STORIES FEHLER: {e}")
-        result["stories_error"] = str(e)
-
     # Facebook
     if not data.get("skip_fb"):
         try:
-            fb_id = publish_facebook(data)
+            caption_fb = data.get("caption_fb") or data["caption"].split("\n\n#")[0]
+            fb_id = publish_facebook(slide_urls, caption_fb)
             result["fb_id"] = fb_id
         except Exception as e:
-            print(f"FB FEHLER: {e}")
+            print(f"FB FEHLER (IG war erfolgreich): {e}")
             result["fb_error"] = str(e)
 
     # Move to done
     result["published_at"] = datetime.now(timezone.utc).isoformat()
+    result["slide_urls"] = slide_urls
     data["result"] = result
     DONE_DIR.mkdir(exist_ok=True)
-    done_path = DONE_DIR / job_file.name
-    done_path.write_text(json.dumps(data, indent=2, ensure_ascii=False))
-    job_file.unlink()
+    done_meta = DONE_DIR / f"{post_dir.name}.json"
+    done_meta.write_text(json.dumps(data, indent=2, ensure_ascii=False))
 
-    print(f"\nFERTIG — verschoben nach done/{job_file.name}")
+    # Remove post directory from queue
+    shutil.rmtree(post_dir)
+
+    print(f"\nFERTIG — Ergebnis in done/{post_dir.name}.json")
 
 
 if __name__ == "__main__":

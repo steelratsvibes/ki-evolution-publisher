@@ -24,13 +24,13 @@ jobs:
       - name: Check queue
         id: check
         run: |
-          if [ -z "$(ls queue/*.json 2>/dev/null)" ]; then
+          if [ -z "$(ls queue/*/meta.json 2>/dev/null)" ]; then
             echo "empty=true" >> $GITHUB_OUTPUT
             echo "Queue is empty — nothing to publish"
           else
             echo "empty=false" >> $GITHUB_OUTPUT
             echo "Found staged posts:"
-            ls queue/*.json
+            ls queue/*/meta.json
           fi
 
       - name: Publish
@@ -38,6 +38,7 @@ jobs:
         env:
           IG_USER_ID: ${{ secrets.IG_USER_ID }}
           IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+          IMGBB_API_KEY: ${{ secrets.IMGBB_API_KEY }}
           FB_ACCESS_TOKEN: ${{ secrets.FB_ACCESS_TOKEN }}
           FB_PAGE_ID: ${{ secrets.FB_PAGE_ID }}
         run: python publish.py
