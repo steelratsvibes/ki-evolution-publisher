@@ -1,0 +1,11 @@
+{
+  "content_id": "post-instagram-auto-publish-python-scrip",
+  "title": "Instagram Auto-Publish: Erster Carousel-Post per Python-Script",
+  "planned_date": "2026-03-14",
+  "planned_time": "08:00",
+  "caption": "Von der Idee zum fertigen Instagram-Carousel in unter 3 Minuten. Ohne Canva, ohne Content-Kalender, ohne manuelles Posten.\n\nHeisst praktisch fuer dich: Ein Python-Script nimmt dein Thema, generiert Texte mit Claude, erstellt Bilder mit GPT-Image-1 und postet alles automatisch auf Instagram. Kosten pro Post: 25 Cent.\n\nDer erste Post hat 2 Stunden Debugging gebraucht — 4 API-Bugs, die alle gleichzeitig aufgetaucht sind. Jeder weitere Post: 3 Minuten. Das ist der Unterschied zwischen Setup-Aufwand und laufendem System.\n\nKonkret heisst das: Die eigentliche Arbeit steckt nicht im Script. Sie steckt im Debugging der APIs, die sich anders verhalten als dokumentiert. Aber jeder Bug, den du einmal fixt, ist fuer immer gefixt.\n\nWas automatisierst du als Erstes mit KI?\n\n#KI #KIEvolution #AITools #ClaudeCode #InstagramAutomation #PythonAutomation #ContentCreation #KIimAlltag #AgenticAI #Automatisierung #AIimBusiness #Solopreneur",
+  "caption_fb": "Von der Idee zum fertigen Instagram-Carousel in unter 3 Minuten. Ohne Canva, ohne Content-Kalender, ohne manuelles Posten.\n\nHeisst praktisch fuer dich: Ein Python-Script nimmt dein Thema, generiert Texte mit Claude, erstellt Bilder mit GPT-Image-1 und postet alles automatisch auf Instagram. Kosten pro Post: 25 Cent.\n\nDer erste Post hat 2 Stunden Debugging gebraucht — 4 API-Bugs, die alle gleichzeitig aufgetaucht sind. Jeder weitere Post: 3 Minuten. Das ist der Unterschied zwischen Setup-Aufwand und laufendem System.\n\nKonkret heisst das: Die eigentliche Arbeit steckt nicht im Script. Sie steckt im Debugging der APIs, die sich anders verhalten als dokumentiert. Aber jeder Bug, den du einmal fixt, ist fuer immer gefixt.\n\nWas automatisierst du als Erstes mit KI?",
+  "benefit": "Instagram Auto-Publish: Erster Carousel-Post per Python-Script",
+  "skip_fb": false,
+  "staged_at": "2026-03-05T09:49:47"
+}

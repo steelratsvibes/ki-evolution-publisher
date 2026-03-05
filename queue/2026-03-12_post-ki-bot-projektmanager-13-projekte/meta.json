@@ -1,0 +1,11 @@
+{
+  "content_id": "post-ki-bot-projektmanager-13-projekte",
+  "title": "KI-Bot als Projektmanager: 13 Projekte via JSON + Git",
+  "planned_date": "2026-03-12",
+  "planned_time": "08:00",
+  "caption": "13 Projekte, 18 Tasks, eine Content-Pipeline. Alles in einem Dashboard — aber mein KI-Bot konnte es nicht lesen.\n\nHeisst praktisch: Jedes Mal \"Was steht an?\" fragen und eine vage Antwort aus dem Memory bekommen.\n\nDie Lösung: Ein JSON-Block direkt im Dashboard. Ein Python-Script extrahiert alle 15 Minuten den State. Git synct ihn zum Server. Kein neuer Dienst, keine Datenbank.\n\nErgebnis: Morgens um 08:30 kommt ein Telegram-Briefing. Stale Projekte werden gemeldet. Prioritäten sind priorisiert.\n\nKonkret heisst das: Du brauchst keine neue Infrastruktur für smarte Bots. Nutze was du hast — und mach es maschinenlesbar.\n\nWas überwacht dein KI-Bot? Oder macht er nur das, was du ihm sagst?\n\nFoto: evolutionki.de\n\n#KI #AI #ClaudeCode #KIEvolution #AITools #Produktivitaet #Automatisierung #KIBot #Projektmanagement #SoloPreneur #AIAgent #TechTipps",
+  "caption_fb": "13 Projekte, 18 Tasks, eine Content-Pipeline. Alles in einem Dashboard — aber mein KI-Bot konnte es nicht lesen.\n\nHeisst praktisch: Jedes Mal \"Was steht an?\" fragen und eine vage Antwort aus dem Memory bekommen.\n\nDie Lösung: Ein JSON-Block direkt im Dashboard. Ein Python-Script extrahiert alle 15 Minuten den State. Git synct ihn zum Server. Kein neuer Dienst, keine Datenbank.\n\nErgebnis: Morgens um 08:30 kommt ein Telegram-Briefing. Stale Projekte werden gemeldet. Prioritäten sind priorisiert.\n\nKonkret heisst das: Du brauchst keine neue Infrastruktur für smarte Bots. Nutze was du hast — und mach es maschinenlesbar.\n\nWas überwacht dein KI-Bot? Oder macht er nur das, was du ihm sagst?\n\nFoto: evolutionki.de",
+  "benefit": "KI-Bot als Projektmanager: 13 Projekte via JSON + Git",
+  "skip_fb": false,
+  "staged_at": "2026-03-05T09:49:47"
+}
