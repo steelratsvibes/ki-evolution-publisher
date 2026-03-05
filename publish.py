@@ -141,6 +141,29 @@ def publish_facebook(slide_urls: list[str], caption: str) -> str | None:
     return post_id
 
 
+def publish_story(cover_url: str) -> str | None:
+    """Publish cover slide as Instagram Story (mini-preview driver)."""
+    print("\nInstagram Story...")
+    try:
+        r = ig_post(f"{IG_USER_ID}/media", {
+            "image_url": cover_url,
+            "media_type": "STORIES",
+            "access_token": IG_TOKEN,
+        })
+        creation_id = r["id"]
+        print("  10s warten + publishen...")
+        time.sleep(10)
+        r = ig_post(f"{IG_USER_ID}/media_publish", {
+            "creation_id": creation_id, "access_token": IG_TOKEN,
+        })
+        story_id = r["id"]
+        print(f"  STORY LIVE: {story_id}")
+        return story_id
+    except Exception as e:
+        print(f"  STORY FEHLER (nicht kritisch): {e}")
+        return None
+
+
 def find_todays_job() -> Path | None:
     """Find the meta.json for today's (or oldest overdue) post."""
     today = date.today().isoformat()
@@ -206,6 +229,12 @@ def main():
         print(f"CAROUSEL FEHLER: {e}")
         result["carousel_error"] = str(e)
         sys.exit(1)
+
+    # Story (cover slide as teaser)
+    if not data.get("skip_story"):
+        story_id = publish_story(slide_urls[0])
+        if story_id:
+            result["story_id"] = story_id
 
     # Facebook
     if not data.get("skip_fb"):
