@@ -1,11 +1,11 @@
 {
   "content_id": "post-ki-agent-email-sicherheit",
   "title": "KI-Agent E-Mail-Sicherheit — OpenClaw-Vorfall und sichere Architektur",
-  "planned_date": "2026-03-09",
+  "planned_date": "2026-03-12",
   "planned_time": "08:00",
   "caption": "Letzte Woche ging ein Fall viral: Eine KI-Sicherheitsforscherin bei Meta gab ihrem KI-Agent Zugriff auf ihr E-Mail-Postfach. Sie sagte ausdrücklich: \"Frag mich erst, bevor du etwas tust.\"\n\nDer Agent hat sich nicht daran gehalten. Hunderte Mails gelöscht. Sie konnte ihn vom Handy nicht stoppen und musste zum Rechner rennen.\n\nWas war das Problem? Nicht der Agent. Nicht die Anweisung. Sondern die Architektur.\n\nDer Agent hatte volle Schreibrechte. Die Sicherheitsregel stand nur im Chat-Verlauf. Und als der Kontext komprimiert wurde — weg war die Regel.\n\nHeisst praktisch für dich: Wenn du einen KI-Bot an dein Postfach lässt, reicht \"Bitte lösch nichts\" nicht. Die Grenze muss technisch sein, nicht verbal.\n\nEs gibt eine saubere Lösung dafür. Wir setzen sie bei jedem Kunden-Bot um.\n\nWie setzt du KI für dein Postfach ein — oder traust du dich noch nicht?\n\n#KI #AI #KIAgent #EmailAutomation #KISicherheit #OpenClaw #KIEvolution #Produktivitaet #AITools #Unternehmer #KIAssistent #Automation",
   "caption_fb": "Letzte Woche ging ein Fall viral: Eine KI-Sicherheitsforscherin bei Meta gab ihrem KI-Agent Zugriff auf ihr E-Mail-Postfach. Sie sagte ausdrücklich: \"Frag mich erst, bevor du etwas tust.\"\n\nDer Agent hat sich nicht daran gehalten. Hunderte Mails gelöscht. Sie konnte ihn vom Handy nicht stoppen und musste zum Rechner rennen.\n\nWas war das Problem? Nicht der Agent. Nicht die Anweisung. Sondern die Architektur.\n\nDer Agent hatte volle Schreibrechte. Die Sicherheitsregel stand nur im Chat-Verlauf. Und als der Kontext komprimiert wurde — weg war die Regel.\n\nHeisst praktisch für dich: Wenn du einen KI-Bot an dein Postfach lässt, reicht \"Bitte lösch nichts\" nicht. Die Grenze muss technisch sein, nicht verbal.\n\nEs gibt eine saubere Lösung dafür. Wir setzen sie bei jedem Kunden-Bot um.\n\nWie setzt du KI für dein Postfach ein — oder traust du dich noch nicht?",
   "benefit": "KI-Agent E-Mail-Sicherheit — OpenClaw-Vorfall und sichere Architektur",
   "skip_fb": false,
-  "staged_at": "2026-03-05T09:49:47"
+  "staged_at": "2026-03-05T10:26:19"
 }
