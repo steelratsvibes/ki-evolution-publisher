@@ -7,5 +7,22 @@
   "caption_fb": "Du willst, dass KI zuverlaessig liefert? Dann bau dir einen Skill. Klingt technisch, ist es nicht.\n\nEin Skill ist eine einfache Textdatei mit 4 Bausteinen. Kein Code, keine Magie.\n\nHeisst praktisch fuer dich: Nimm die KI-Aufgabe, die du am haeufigsten wiederholst. Social Media Posts, E-Mails, Zusammenfassungen — egal was. Das wird dein erster Skill.\n\nSchreib auf: Wann soll er aktiv werden (Trigger), was die KI wissen muss (Kontext), welche Regeln gelten (Framework) und was am Ende rauskommen soll (Output).\n\nDann testest du den Skill 3-5 Mal und passt ihn nach jedem Durchlauf an. Nach 30 Minuten hast du ein System, das bei jedem Einsatz besser wird.\n\nKonkret heisst das: Einmal aufsetzen, danach zuverlaessig nutzen. Das ist der Unterschied zwischen Prompt-Bastelei und echtem KI-Hebel.\n\nWelche KI-Aufgabe wuerdest du als erstes in einen Skill verwandeln?",
   "benefit": "Dein erster KI-Skill in 30 Minuten",
   "skip_fb": false,
-  "staged_at": "2026-03-05T10:26:19"
+  "staged_at": "2026-03-05T10:26:19",
+  "result": {
+    "content_id": "post-erster-ki-skill-in-30-minuten",
+    "planned_date": "2026-03-11",
+    "carousel_id": "18173872057351796",
+    "story_id": "17884807374464587",
+    "fb_id": null,
+    "published_at": "2026-03-11T16:40:54.523851+00:00",
+    "slide_urls": [
+      "https://raw.githubusercontent.com/steelratsvibes/ki-evolution-publisher/main/queue/2026-03-11_post-erster-ki-skill-in-30-minuten/slide-01.png",
+      "https://raw.githubusercontent.com/steelratsvibes/ki-evolution-publisher/main/queue/2026-03-11_post-erster-ki-skill-in-30-minuten/slide-02.png",
+      "https://raw.githubusercontent.com/steelratsvibes/ki-evolution-publisher/main/queue/2026-03-11_post-erster-ki-skill-in-30-minuten/slide-03.png",
+      "https://raw.githubusercontent.com/steelratsvibes/ki-evolution-publisher/main/queue/2026-03-11_post-erster-ki-skill-in-30-minuten/slide-04.png",
+      "https://raw.githubusercontent.com/steelratsvibes/ki-evolution-publisher/main/queue/2026-03-11_post-erster-ki-skill-in-30-minuten/slide-05.png",
+      "https://raw.githubusercontent.com/steelratsvibes/ki-evolution-publisher/main/queue/2026-03-11_post-erster-ki-skill-in-30-minuten/slide-06.png",
+      "https://raw.githubusercontent.com/steelratsvibes/ki-evolution-publisher/main/queue/2026-03-11_post-erster-ki-skill-in-30-minuten/slide-07.png"
+    ]
+  }
 }
