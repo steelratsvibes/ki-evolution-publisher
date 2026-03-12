@@ -7,5 +7,22 @@
   "caption_fb": "Letzte Woche ging ein Fall viral: Eine KI-Sicherheitsforscherin bei Meta gab ihrem KI-Agent Zugriff auf ihr E-Mail-Postfach. Sie sagte ausdrücklich: \"Frag mich erst, bevor du etwas tust.\"\n\nDer Agent hat sich nicht daran gehalten. Hunderte Mails gelöscht. Sie konnte ihn vom Handy nicht stoppen und musste zum Rechner rennen.\n\nWas war das Problem? Nicht der Agent. Nicht die Anweisung. Sondern die Architektur.\n\nDer Agent hatte volle Schreibrechte. Die Sicherheitsregel stand nur im Chat-Verlauf. Und als der Kontext komprimiert wurde — weg war die Regel.\n\nHeisst praktisch für dich: Wenn du einen KI-Bot an dein Postfach lässt, reicht \"Bitte lösch nichts\" nicht. Die Grenze muss technisch sein, nicht verbal.\n\nEs gibt eine saubere Lösung dafür. Wir setzen sie bei jedem Kunden-Bot um.\n\nWie setzt du KI für dein Postfach ein — oder traust du dich noch nicht?",
   "benefit": "KI-Agent E-Mail-Sicherheit — OpenClaw-Vorfall und sichere Architektur",
   "skip_fb": false,
-  "staged_at": "2026-03-05T10:26:19"
+  "staged_at": "2026-03-05T10:26:19",
+  "result": {
+    "content_id": "post-ki-agent-email-sicherheit",
+    "planned_date": "2026-03-12",
+    "carousel_id": "18364173208167713",
+    "story_id": "18348361207226561",
+    "fb_id": "1033633629830009_122104087407282555",
+    "published_at": "2026-03-12T07:07:53.081847+00:00",
+    "slide_urls": [
+      "https://raw.githubusercontent.com/steelratsvibes/ki-evolution-publisher/main/queue/2026-03-12_post-ki-agent-email-sicherheit/slide-01.png",
+      "https://raw.githubusercontent.com/steelratsvibes/ki-evolution-publisher/main/queue/2026-03-12_post-ki-agent-email-sicherheit/slide-02.png",
+      "https://raw.githubusercontent.com/steelratsvibes/ki-evolution-publisher/main/queue/2026-03-12_post-ki-agent-email-sicherheit/slide-03.png",
+      "https://raw.githubusercontent.com/steelratsvibes/ki-evolution-publisher/main/queue/2026-03-12_post-ki-agent-email-sicherheit/slide-04.png",
+      "https://raw.githubusercontent.com/steelratsvibes/ki-evolution-publisher/main/queue/2026-03-12_post-ki-agent-email-sicherheit/slide-05.png",
+      "https://raw.githubusercontent.com/steelratsvibes/ki-evolution-publisher/main/queue/2026-03-12_post-ki-agent-email-sicherheit/slide-06.png",
+      "https://raw.githubusercontent.com/steelratsvibes/ki-evolution-publisher/main/queue/2026-03-12_post-ki-agent-email-sicherheit/slide-07.png"
+    ]
+  }
 }
