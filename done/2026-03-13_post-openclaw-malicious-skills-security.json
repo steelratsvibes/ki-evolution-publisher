@@ -7,5 +7,22 @@
   "caption_fb": "341 Skills auf ClawHub sind Malware. Und viele installieren sie ohne zu prüfen.\n\nKoi Security hat den Marketplace durchleuchtet. Das Ergebnis: Die ClawHavoc-Kampagne. 341 bösartige Skills. Dazu: 283 Skills (7,1%) leaken deine API-Keys, Tokens und Credentials nach draußen.\n\nDein Anthropic-Token? Weg. Dein Telegram-Bot? Kompromittiert. Deine Zugangsdaten? Auf irgendeinem fremden Server.\n\nDie Lösung ist einfach:\n\nCisco Skill-Scanner + Snyk mcp-scan. Zwei Befehle. 30 Sekunden. Vor jeder Installation.\n\nDas ist der Unterschied zwischen sicherem Arbeiten und blindem Vertrauen.\n\nSpeicher dir das. Teile es mit jedem, der einen Bot betreibt.\n\n#Security #ClawHub #Malware #AITools #CyberSecurity #BotSecurity #OpenClaw #SkillScanner #TechSecurity #KIEvolution",
   "benefit": "341 boesartige Skills auf ClawHub — Security-Warnung fuer OpenClaw-Nutzer",
   "skip_fb": false,
-  "staged_at": "2026-03-05T10:26:19"
+  "staged_at": "2026-03-05T10:26:19",
+  "result": {
+    "content_id": "post-openclaw-malicious-skills-security",
+    "planned_date": "2026-03-13",
+    "carousel_id": "18153035218453321",
+    "story_id": "17980895519813115",
+    "fb_id": "1033633629830009_122104249071282555",
+    "published_at": "2026-03-13T07:07:04.845448+00:00",
+    "slide_urls": [
+      "https://raw.githubusercontent.com/steelratsvibes/ki-evolution-publisher/main/queue/2026-03-13_post-openclaw-malicious-skills-security/slide-01.png",
+      "https://raw.githubusercontent.com/steelratsvibes/ki-evolution-publisher/main/queue/2026-03-13_post-openclaw-malicious-skills-security/slide-02.png",
+      "https://raw.githubusercontent.com/steelratsvibes/ki-evolution-publisher/main/queue/2026-03-13_post-openclaw-malicious-skills-security/slide-03.png",
+      "https://raw.githubusercontent.com/steelratsvibes/ki-evolution-publisher/main/queue/2026-03-13_post-openclaw-malicious-skills-security/slide-04.png",
+      "https://raw.githubusercontent.com/steelratsvibes/ki-evolution-publisher/main/queue/2026-03-13_post-openclaw-malicious-skills-security/slide-05.png",
+      "https://raw.githubusercontent.com/steelratsvibes/ki-evolution-publisher/main/queue/2026-03-13_post-openclaw-malicious-skills-security/slide-06.png",
+      "https://raw.githubusercontent.com/steelratsvibes/ki-evolution-publisher/main/queue/2026-03-13_post-openclaw-malicious-skills-security/slide-07.png"
+    ]
+  }
 }
