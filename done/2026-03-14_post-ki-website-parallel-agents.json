@@ -7,5 +7,22 @@
   "caption_fb": "10 Seiten. 1 Session. 0 Agentur.\n\nIch hab Claude Code 3 parallele Agents losgeschickt. Einer baut die Hauptseite. Einer die Produkt-Landing-Page. Einer 5 Blog-Artikel.\n\nDas Ergebnis: 10 fertige HTML-Dateien. Dark Mode. Mobile-responsive. Security Audit bestanden.\n\nWas das möglich macht? Ein sauberer Plan und ein Shared Design System. Einmal gebaut, 10-mal genutzt.\n\nDer beste Teil: Die KI hat ihren eigenen Code im Browser getestet. Dark Mode geklickt. Auf 375px geschrumpft. Einen Nav-Bug gefunden. Gefixt. In derselben Session.\n\nKeine 5.000 Euro für eine Agentur. Keine 4 Wochen Wartezeit. Ein Nachmittag. Fertig.\n\nDas ist kein Zukunftsszenario. Das ist Dienstag.\n\nWas würdest du mit 3 parallelen Agenten bauen?\n\n#ClaudeCode #WebDevelopment #AI #Automatisierung #WebDesign #Produktivität #Anthropic #AITools #ParallelAgents #KIEvolution",
   "benefit": "10-Seiten-Website mit 3 parallelen Claude Code Agents gebaut",
   "skip_fb": false,
-  "staged_at": "2026-03-05T10:26:19"
+  "staged_at": "2026-03-05T10:26:19",
+  "result": {
+    "content_id": "post-ki-website-parallel-agents",
+    "planned_date": "2026-03-14",
+    "carousel_id": "18102530413728476",
+    "story_id": "18109468942765953",
+    "fb_id": "1033633629830009_122104478553282555",
+    "published_at": "2026-03-14T07:01:21.631816+00:00",
+    "slide_urls": [
+      "https://raw.githubusercontent.com/steelratsvibes/ki-evolution-publisher/main/queue/2026-03-14_post-ki-website-parallel-agents/slide-01.png",
+      "https://raw.githubusercontent.com/steelratsvibes/ki-evolution-publisher/main/queue/2026-03-14_post-ki-website-parallel-agents/slide-02.png",
+      "https://raw.githubusercontent.com/steelratsvibes/ki-evolution-publisher/main/queue/2026-03-14_post-ki-website-parallel-agents/slide-03.png",
+      "https://raw.githubusercontent.com/steelratsvibes/ki-evolution-publisher/main/queue/2026-03-14_post-ki-website-parallel-agents/slide-04.png",
+      "https://raw.githubusercontent.com/steelratsvibes/ki-evolution-publisher/main/queue/2026-03-14_post-ki-website-parallel-agents/slide-05.png",
+      "https://raw.githubusercontent.com/steelratsvibes/ki-evolution-publisher/main/queue/2026-03-14_post-ki-website-parallel-agents/slide-06.png",
+      "https://raw.githubusercontent.com/steelratsvibes/ki-evolution-publisher/main/queue/2026-03-14_post-ki-website-parallel-agents/slide-07.png"
+    ]
+  }
 }
