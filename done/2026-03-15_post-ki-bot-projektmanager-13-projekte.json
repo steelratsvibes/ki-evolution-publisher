@@ -7,5 +7,22 @@
   "caption_fb": "13 Projekte, 18 Tasks, eine Content-Pipeline. Alles in einem Dashboard — aber mein KI-Bot konnte es nicht lesen.\n\nHeisst praktisch: Jedes Mal \"Was steht an?\" fragen und eine vage Antwort aus dem Memory bekommen.\n\nDie Lösung: Ein JSON-Block direkt im Dashboard. Ein Python-Script extrahiert alle 15 Minuten den State. Git synct ihn zum Server. Kein neuer Dienst, keine Datenbank.\n\nErgebnis: Morgens um 08:30 kommt ein Telegram-Briefing. Stale Projekte werden gemeldet. Prioritäten sind priorisiert.\n\nKonkret heisst das: Du brauchst keine neue Infrastruktur für smarte Bots. Nutze was du hast — und mach es maschinenlesbar.\n\nWas überwacht dein KI-Bot? Oder macht er nur das, was du ihm sagst?\n\nFoto: evolutionki.de",
   "benefit": "KI-Bot als Projektmanager: 13 Projekte via JSON + Git",
   "skip_fb": false,
-  "staged_at": "2026-03-05T10:26:19"
+  "staged_at": "2026-03-05T10:26:19",
+  "result": {
+    "content_id": "post-ki-bot-projektmanager-13-projekte",
+    "planned_date": "2026-03-15",
+    "carousel_id": "18068830274647743",
+    "story_id": "17874666018434679",
+    "fb_id": "1033633629830009_122104691109282555",
+    "published_at": "2026-03-15T07:10:46.604687+00:00",
+    "slide_urls": [
+      "https://raw.githubusercontent.com/steelratsvibes/ki-evolution-publisher/main/queue/2026-03-15_post-ki-bot-projektmanager-13-projekte/slide-01.png",
+      "https://raw.githubusercontent.com/steelratsvibes/ki-evolution-publisher/main/queue/2026-03-15_post-ki-bot-projektmanager-13-projekte/slide-02.png",
+      "https://raw.githubusercontent.com/steelratsvibes/ki-evolution-publisher/main/queue/2026-03-15_post-ki-bot-projektmanager-13-projekte/slide-03.png",
+      "https://raw.githubusercontent.com/steelratsvibes/ki-evolution-publisher/main/queue/2026-03-15_post-ki-bot-projektmanager-13-projekte/slide-04.png",
+      "https://raw.githubusercontent.com/steelratsvibes/ki-evolution-publisher/main/queue/2026-03-15_post-ki-bot-projektmanager-13-projekte/slide-05.png",
+      "https://raw.githubusercontent.com/steelratsvibes/ki-evolution-publisher/main/queue/2026-03-15_post-ki-bot-projektmanager-13-projekte/slide-06.png",
+      "https://raw.githubusercontent.com/steelratsvibes/ki-evolution-publisher/main/queue/2026-03-15_post-ki-bot-projektmanager-13-projekte/slide-07.png"
+    ]
+  }
 }
