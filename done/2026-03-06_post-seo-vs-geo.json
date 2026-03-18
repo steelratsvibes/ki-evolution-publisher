@@ -7,5 +7,22 @@
   "caption_fb": "SEO ist nicht tot. Aber es reicht nicht mehr.\n\nGoogle war 20 Jahre lang die einzige Tür zu deinen Kunden. Das ändert sich gerade.\n\nAI Overviews fressen Klicks. Dein Blog wird bald häufiger von KI gelesen als von Menschen. Und die Frage ist nicht ob, sondern wann.\n\nDeshalb gibt es jetzt GEO — Generative Engine Optimization. Das Ziel: Deine Inhalte so aufbereiten, dass KI-Modelle sie zitieren. Nicht nur Google, sondern ChatGPT, Perplexity, Gemini.\n\nDer Unterschied zu SEO:\n- Keywords vs. Entities\n- Backlinks vs. Zitier-Signale\n- Click-Through vs. Erwähnung\n\nAnderes Spiel. Andere Regeln.\n\nDie gute Nachricht: 80% überlappen sich. Guter Content + technische Basics = sichtbar für Google UND KI. Du musst nicht bei Null anfangen.\n\nMein Tipp: Mach beides. SEO für Google, GEO für ChatGPT. Fang mit Schema Markup und klaren Strukturen an.\n\nWas würdest du zuerst optimieren — SEO oder GEO?",
   "benefit": "SEO ist nicht tot — aber es reicht nicht mehr",
   "skip_fb": false,
-  "staged_at": "2026-03-05T10:26:19"
+  "staged_at": "2026-03-05T10:26:19",
+  "result": {
+    "content_id": "post-seo-vs-geo",
+    "planned_date": "2026-03-06",
+    "carousel_id": "17912314152162727",
+    "story_id": "18075094451536761",
+    "fb_id": "1033633629830009_122105103741282555",
+    "published_at": "2026-03-18T07:14:32.359397+00:00",
+    "slide_urls": [
+      "https://raw.githubusercontent.com/steelratsvibes/ki-evolution-publisher/main/queue/2026-03-06_post-seo-vs-geo/slide-01.png",
+      "https://raw.githubusercontent.com/steelratsvibes/ki-evolution-publisher/main/queue/2026-03-06_post-seo-vs-geo/slide-02.png",
+      "https://raw.githubusercontent.com/steelratsvibes/ki-evolution-publisher/main/queue/2026-03-06_post-seo-vs-geo/slide-03.png",
+      "https://raw.githubusercontent.com/steelratsvibes/ki-evolution-publisher/main/queue/2026-03-06_post-seo-vs-geo/slide-04.png",
+      "https://raw.githubusercontent.com/steelratsvibes/ki-evolution-publisher/main/queue/2026-03-06_post-seo-vs-geo/slide-05.png",
+      "https://raw.githubusercontent.com/steelratsvibes/ki-evolution-publisher/main/queue/2026-03-06_post-seo-vs-geo/slide-06.png",
+      "https://raw.githubusercontent.com/steelratsvibes/ki-evolution-publisher/main/queue/2026-03-06_post-seo-vs-geo/slide-07.png"
+    ]
+  }
 }
