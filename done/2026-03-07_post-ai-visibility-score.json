@@ -7,5 +7,20 @@
   "caption_fb": "Mein AI-Visibility-Score: 23 von 100.\n\nIch habe mich selbst gescannt. 4 KI-Modelle befragt — ChatGPT, Perplexity, Gemini und Claude. Die Frage: Kennen die mich? Empfehlen die mich?\n\nDas Ergebnis hat mich überrascht.\n\nPerplexity kennt mich. Zitiert sogar Blog-Artikel mit Link. ChatGPT? Keine Ahnung wer ich bin. Gemini? Auch nicht. Claude: teilweise.\n\nJedes KI-Modell sieht das Web anders. Und genau das ist das Problem — und die Chance.\n\nDein Score ist nicht dein Wert. Aber er zeigt dir ganz genau, wo du ansetzen kannst. Bei welchem Modell du unsichtbar bist. Wer stattdessen empfohlen wird. Und was du ändern musst.\n\nKleine Änderungen, großer Effekt. Wer seine Lücken kennt, kann sie schließen.\n\nMein eigener Score hat mich überrascht. Was glaubst du — wie hoch ist deiner?",
   "benefit": "So sieht ein AI-Visibility-Score aus",
   "skip_fb": false,
-  "staged_at": "2026-03-05T10:26:19"
+  "staged_at": "2026-03-05T10:26:19",
+  "result": {
+    "content_id": "post-ai-visibility-score",
+    "planned_date": "2026-03-07",
+    "carousel_id": "18136877680504668",
+    "story_id": "18116542051635358",
+    "fb_id": "1033633629830009_122105250381282555",
+    "published_at": "2026-03-19T07:09:09.087281+00:00",
+    "slide_urls": [
+      "https://raw.githubusercontent.com/steelratsvibes/ki-evolution-publisher/main/queue/2026-03-07_post-ai-visibility-score/slide-01.png",
+      "https://raw.githubusercontent.com/steelratsvibes/ki-evolution-publisher/main/queue/2026-03-07_post-ai-visibility-score/slide-02.png",
+      "https://raw.githubusercontent.com/steelratsvibes/ki-evolution-publisher/main/queue/2026-03-07_post-ai-visibility-score/slide-03.png",
+      "https://raw.githubusercontent.com/steelratsvibes/ki-evolution-publisher/main/queue/2026-03-07_post-ai-visibility-score/slide-04.png",
+      "https://raw.githubusercontent.com/steelratsvibes/ki-evolution-publisher/main/queue/2026-03-07_post-ai-visibility-score/slide-05.png"
+    ]
+  }
 }
