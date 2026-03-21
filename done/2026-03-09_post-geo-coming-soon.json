@@ -7,5 +7,20 @@
   "caption_fb": "In den letzten Wochen habe ich etwas gebaut.\n\nKeine App. Kein Kurs. Einen Service der eine einfache Frage beantwortet: Wirst du von KI empfohlen?\n\nSo funktioniert es: 4 KI-Modelle werden befragt — ChatGPT, Perplexity, Gemini und Claude. Dann bekommst du einen Score von 0 bis 100. Dazu: Welche Modelle dich kennen. Wer stattdessen empfohlen wird. Und was du konkret ändern kannst.\n\nKein Abo. Kein Haken. Ein kostenloser Scan der dir zeigt wo du stehst.\n\nWarum ich das baue? Weil ich selbst überrascht war wie unsichtbar die meisten DACH-Solopreneure für KI sind. Und weil die meisten es nicht mal wissen.\n\nDas ändert sich bald.\n\nFolge @evolution_ki für Updates. Oder schreib mir eine DM für Early Access.",
   "benefit": "Wirst du von KI empfohlen? Bald findest du es raus.",
   "skip_fb": false,
-  "staged_at": "2026-03-05T10:26:19"
+  "staged_at": "2026-03-05T10:26:19",
+  "result": {
+    "content_id": "post-geo-coming-soon",
+    "planned_date": "2026-03-09",
+    "carousel_id": "18455645158100192",
+    "story_id": "18087317555244905",
+    "fb_id": "1033633629830009_122105537469282555",
+    "published_at": "2026-03-21T06:57:39.726304+00:00",
+    "slide_urls": [
+      "https://raw.githubusercontent.com/steelratsvibes/ki-evolution-publisher/main/queue/2026-03-09_post-geo-coming-soon/slide-01.png",
+      "https://raw.githubusercontent.com/steelratsvibes/ki-evolution-publisher/main/queue/2026-03-09_post-geo-coming-soon/slide-02.png",
+      "https://raw.githubusercontent.com/steelratsvibes/ki-evolution-publisher/main/queue/2026-03-09_post-geo-coming-soon/slide-03.png",
+      "https://raw.githubusercontent.com/steelratsvibes/ki-evolution-publisher/main/queue/2026-03-09_post-geo-coming-soon/slide-04.png",
+      "https://raw.githubusercontent.com/steelratsvibes/ki-evolution-publisher/main/queue/2026-03-09_post-geo-coming-soon/slide-05.png"
+    ]
+  }
 }
