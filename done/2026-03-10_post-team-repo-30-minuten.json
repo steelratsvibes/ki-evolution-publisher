@@ -7,5 +7,22 @@
   "caption_fb": "Von 0 auf Team-Repo in 30 Minuten. Ohne Notion. Ohne Jira.\n\nJemand zeigt mir ein HTML-Template. Sieht aus wie ein Cockpit. Badges, Fortschrittsbalken, Farbverläufe. Beeindruckend — aber kein Mensch kann damit arbeiten.\n\nAlso hab ich die Struktur rausgezogen. Problem, Lösung, Decisions, Phasen, Tests — das ist der wertvolle Kern. Den Rest? Wegwerfen.\n\n30 Minuten später: Markdown-Template. Git Repo. 92 Dateien gepusht. Security-Scan sauber. Team kann sofort loslegen.\n\nDie Formel: Nimm die Denkstruktur. Wirf das Format weg. Bau mit dem, was du schon hast.\n\nFür 2 Leute reichen GitHub + WhatsApp. Alles andere ist Sammeln ohne System.\n\nWas ist dein nächstes Projekt, das eine saubere Struktur braucht?\n\n#TeamWork #GitHub #Produktivität #KIProjekt #AIWorkflow #Markdown #DevTools #StartupTools #TeamManagement #KIEvolution",
   "benefit": "Von 0 auf Team-Repo in 30 Minuten",
   "skip_fb": false,
-  "staged_at": "2026-03-05T10:26:19"
+  "staged_at": "2026-03-05T10:26:19",
+  "result": {
+    "content_id": "post-team-repo-30-minuten",
+    "planned_date": "2026-03-10",
+    "carousel_id": "18354599149228578",
+    "story_id": "17919330801291784",
+    "fb_id": "1033633629830009_122105666787282555",
+    "published_at": "2026-03-22T07:02:12.803953+00:00",
+    "slide_urls": [
+      "https://raw.githubusercontent.com/steelratsvibes/ki-evolution-publisher/main/queue/2026-03-10_post-team-repo-30-minuten/slide-01.png",
+      "https://raw.githubusercontent.com/steelratsvibes/ki-evolution-publisher/main/queue/2026-03-10_post-team-repo-30-minuten/slide-02.png",
+      "https://raw.githubusercontent.com/steelratsvibes/ki-evolution-publisher/main/queue/2026-03-10_post-team-repo-30-minuten/slide-03.png",
+      "https://raw.githubusercontent.com/steelratsvibes/ki-evolution-publisher/main/queue/2026-03-10_post-team-repo-30-minuten/slide-04.png",
+      "https://raw.githubusercontent.com/steelratsvibes/ki-evolution-publisher/main/queue/2026-03-10_post-team-repo-30-minuten/slide-05.png",
+      "https://raw.githubusercontent.com/steelratsvibes/ki-evolution-publisher/main/queue/2026-03-10_post-team-repo-30-minuten/slide-06.png",
+      "https://raw.githubusercontent.com/steelratsvibes/ki-evolution-publisher/main/queue/2026-03-10_post-team-repo-30-minuten/slide-07.png"
+    ]
+  }
 }
