@@ -7,5 +7,22 @@
   "caption_fb": "Von der Idee zum fertigen Instagram-Carousel in unter 3 Minuten. Ohne Canva, ohne Content-Kalender, ohne manuelles Posten.\n\nHeisst praktisch fuer dich: Ein Python-Script nimmt dein Thema, generiert Texte mit Claude, erstellt Bilder mit GPT-Image-1 und postet alles automatisch auf Instagram. Kosten pro Post: 25 Cent.\n\nDer erste Post hat 2 Stunden Debugging gebraucht — 4 API-Bugs, die alle gleichzeitig aufgetaucht sind. Jeder weitere Post: 3 Minuten. Das ist der Unterschied zwischen Setup-Aufwand und laufendem System.\n\nKonkret heisst das: Die eigentliche Arbeit steckt nicht im Script. Sie steckt im Debugging der APIs, die sich anders verhalten als dokumentiert. Aber jeder Bug, den du einmal fixt, ist fuer immer gefixt.\n\nWas automatisierst du als Erstes mit KI?",
   "benefit": "Instagram Auto-Publish: Erster Carousel-Post per Python-Script",
   "skip_fb": false,
-  "staged_at": "2026-03-05T10:36:48"
+  "staged_at": "2026-03-05T10:36:48",
+  "result": {
+    "content_id": "post-instagram-auto-publish-python-scrip",
+    "planned_date": "2026-03-17",
+    "carousel_id": "18069940868274428",
+    "story_id": "17869401738592415",
+    "fb_id": "1033633629830009_122105866287282555",
+    "published_at": "2026-03-23T07:24:23.717945+00:00",
+    "slide_urls": [
+      "https://raw.githubusercontent.com/steelratsvibes/ki-evolution-publisher/main/queue/2026-03-17_post-instagram-auto-publish-python-scrip/slide-01.png",
+      "https://raw.githubusercontent.com/steelratsvibes/ki-evolution-publisher/main/queue/2026-03-17_post-instagram-auto-publish-python-scrip/slide-02.png",
+      "https://raw.githubusercontent.com/steelratsvibes/ki-evolution-publisher/main/queue/2026-03-17_post-instagram-auto-publish-python-scrip/slide-03.png",
+      "https://raw.githubusercontent.com/steelratsvibes/ki-evolution-publisher/main/queue/2026-03-17_post-instagram-auto-publish-python-scrip/slide-04.png",
+      "https://raw.githubusercontent.com/steelratsvibes/ki-evolution-publisher/main/queue/2026-03-17_post-instagram-auto-publish-python-scrip/slide-05.png",
+      "https://raw.githubusercontent.com/steelratsvibes/ki-evolution-publisher/main/queue/2026-03-17_post-instagram-auto-publish-python-scrip/slide-06.png",
+      "https://raw.githubusercontent.com/steelratsvibes/ki-evolution-publisher/main/queue/2026-03-17_post-instagram-auto-publish-python-scrip/slide-07.png"
+    ]
+  }
 }
